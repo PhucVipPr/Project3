@@ -2,6 +2,8 @@ package net.javaguides.springboot.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class MainController {
@@ -11,8 +13,8 @@ public class MainController {
 		return "login";
 	}
 	
-	@GetMapping("/")
+	@RequestMapping(path = "/" , method = RequestMethod.GET)
 	public String home() {
-		return "Home Property/index";
+		return "homeproperty/index";
 	}
 }
